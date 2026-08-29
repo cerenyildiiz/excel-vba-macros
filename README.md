@@ -6,7 +6,7 @@ Kodları yazmadan önce soruyu önce elle (manuel) çözdüm, sonrasında VBA'ya
 
 ## Dosyalar
 
-**Modul1.bas** - aritmetik ortalama, kareli ortalama ve standart sapma hesaplamaları burada.
+**Modul1.bas** - aritmetik ortalama, kareli ortalama ve standart sapma hesaplamaları burada bulunmaktadır.
 
 - `Ortalamalari_Hesapla(seri As Range)` fonksiyonu, verdiğim aralıktaki (alt sınır - üst sınır - frekans şeklinde 3 sütunlu) veriden aritmetik ve kareli ortalamayı hesaplayıp Array ile döndürüyor. Soruda function kullanılması istendiği için ByRef yerine dizi kullanmayı tercih ettim.
 - `Standart_Sapma_Hesapla` fonksiyonu örneklem ya da popülasyon standart sapmasını hesaplıyor, `orneklem_` parametresi True/False olarak ikisi arasında seçim yapmamı sağlıyor.
