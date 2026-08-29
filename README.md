@@ -24,7 +24,7 @@ Popülasyon Standart Sapma: 2,22680885707562
 
 - `Normal_Dagilim_Grafigi()` -3 ile 3 arasındaki Z değerleri için CDF hesaplayıp grafiğe döküyor.
 - `Standart_Normal_Dagilim_Grafik_Cizimi()` aynı mantıkla PDF grafiğini çiziyor.
-- `ListSheetNames()` de asıl işe yaramıyor açıkçası, sayfa adında hata aldığım için kontrol amaçlı eklemiştim, öylece bıraktım.
+- `ListSheetNames()` sayfa adında hata aldığım için kontrol amaçlı ekledim.
 
 
 ## Nasıl çalıştırılır
