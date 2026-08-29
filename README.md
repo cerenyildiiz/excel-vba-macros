@@ -1,6 +1,6 @@
 # İST347 Vize Ödevi - Hesap Tabloları ve Veri Tabanları
 
-Bu repo İST347 dersi için hazırladığım vize ödevindeki VBA kodlarını içeriyor. Ödevde gruplandırılmış veri serisi üzerinden aritmetik ortalama, kareli ortalama ve standart sapma hesaplattım, ayrıca standart normal dağılım için de grafik çizdirdim.
+Bu repo İST347 dersi için hazırladığım vize ödevindeki VBA (Visual Basic for Applications) kodlarını içeriyor. Ödevde gruplandırılmış veri serisi üzerinden aritmetik ortalama, kareli ortalama ve standart sapma hesaplattım, ayrıca standart normal dağılım için de grafik çizdirdim.
 
 Kodları yazmadan önce soruyu önce elle (manuel) çözdüm, sonrasında VBA'ya döktüm. Böylece kodun doğru çalışıp çalışmadığını manuel sonuçlarla karşılaştırarak kontrol edebildim.
 
