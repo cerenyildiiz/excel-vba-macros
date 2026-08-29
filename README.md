@@ -20,7 +20,7 @@ Kareli Ortalama: 49
 Popülasyon Standart Sapma: 2,22680885707562
 ```
 
-**Modul2.bas** - bu modülde de Norm_S_Dist fonksiyonunu kullanarak standart normal dağılımın hem kümülatif dağılım (CDF) hem de olasılık yoğunluk fonksiyonu (PDF) grafiklerini çizdirdim.
+**Modul2.bas** - bu modülde de   `Norm_S_Dist`    fonksiyonunu kullanarak standart normal dağılımın hem kümülatif dağılım (CDF) hem de olasılık yoğunluk fonksiyonu (PDF) grafiklerini çizdirdim.
 
 - `Normal_Dagilim_Grafigi()` -3 ile 3 arasındaki Z değerleri için CDF hesaplayıp grafiğe döküyor.
 - `Standart_Normal_Dagilim_Grafik_Cizimi()` aynı mantıkla PDF grafiğini çiziyor.
