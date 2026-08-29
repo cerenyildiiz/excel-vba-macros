@@ -1,47 +1,37 @@
 # İST347 Vize Ödevi - Hesap Tabloları ve Veri Tabanları
 
-Bu repo İST347 dersi için hazırladığım vize ödevindeki VBA (Visual Basic for Applications) kodlarını içeriyor. Ödevde gruplandırılmış veri serisi üzerinden aritmetik ortalama, kareli ortalama ve standart sapma hesaplattım, ayrıca standart normal dağılım için de grafik çizdirdim.
+Bu repo, **İST347 - Hesap Tabloları ve Veri Tabanları** dersi kapsamında, **2023-2024 güz döneminde** hazırladığım vize ödevinde kullandığım **VBA (Visual Basic for Applications)** kodlarını içermektedir.
 
-Kodları yazmadan önce soruyu önce elle (manuel) çözdüm, sonrasında VBA'ya döktüm. Böylece kodun doğru çalışıp çalışmadığını manuel sonuçlarla karşılaştırarak kontrol edebildim.
+Ödev kapsamında, gruplandırılmış veri serisi üzerinden **aritmetik ortalama, kareli ortalama ve standart sapma** hesaplamaları yapılmıştır. Ayrıca, **standart normal dağılımın kümülatif dağılım fonksiyonu (CDF)** ve **olasılık yoğunluk fonksiyonu (PDF)** için grafikler oluşturulmuştur.
+
+Kodları geliştirmeden önce gerekli hesaplamaları **manuel olarak** gerçekleştirdim. Daha sonra aynı hesaplamaları VBA kullanarak kodladım ve elde edilen sonuçları manuel hesaplamalarla karşılaştırarak kontrol ettim.
 
 ## Dosyalar
 
-**Modul1.bas** - aritmetik ortalama, kareli ortalama ve standart sapma hesaplamaları burada bulunmaktadır.
+### `Modul1.bas`
 
-- `Ortalamalari_Hesapla(seri As Range)` fonksiyonu, verdiğim aralıktaki (alt sınır - üst sınır - frekans şeklinde 3 sütunlu) veriden aritmetik ve kareli ortalamayı hesaplayıp Array ile döndürüyor. Soruda function kullanılması istendiği için ByRef yerine dizi kullanmayı tercih ettim.
-- `Standart_Sapma_Hesapla` fonksiyonu örneklem ya da popülasyon standart sapmasını hesaplıyor, `orneklem_` parametresi True/False olarak ikisi arasında seçim yapmamı sağlıyor.
-- `Merkezi_Egilim_ve_Sapma_Hesabı()` Sub'ı ise hepsini çalıştırıp sonuçları Immediate Window'a yazdırıyor.
+Bu modülde, gruplandırılmış veri serisi üzerinden **aritmetik ortalama, kareli ortalama ve standart sapma** hesaplamaları için kullanılan VBA kodları bulunmaktadır.
 
-Çıktı şu şekilde çıkıyor:
-```
+- `Ortalamalari_Hesapla(seri As Range)` fonksiyonu, **alt sınır, üst sınır ve frekans** bilgilerinden oluşan üç sütunlu veri aralığını kullanarak aritmetik ve kareli ortalamayı hesaplar.
+- Fonksiyon birden fazla sonuç döndürdüğü için sonuçları `Array` kullanarak döndürmektedir. Ödevde `Function` kullanılması istendiğinden bu yöntem tercih edilmiştir.
+- `Standart_Sapma_Hesapla` fonksiyonu, gruplandırılmış veri üzerinden **örneklem ve popülasyon standart sapmasını** hesaplar. `orneklem_` parametresi ile hesaplanacak standart sapma türü belirlenir.
+- `Merkezi_Egilim_ve_Sapma_Hesabı()` `Sub` prosedürü, ilgili hesaplamaları çalıştırır ve sonuçları **Immediate Window**'a yazdırır.
+
+### Örnek Çıktı
+
+```text
 Aritmetik Ortalama: 6,63636363636364
 Kareli Ortalama: 49
 Örneklem Standart Sapma: 2,33549683248457
 Popülasyon Standart Sapma: 2,22680885707562
+
+
 ```
 
-**Modul2.bas** - bu modülde de   `Norm_S_Dist`    fonksiyonunu kullanarak standart normal dağılımın hem kümülatif dağılım (CDF) hem de olasılık yoğunluk fonksiyonu (PDF) grafiklerini çizdirdim.
+### `Modul2.bas`
 
-- `Normal_Dagilim_Grafigi()` -3 ile 3 arasındaki Z değerleri için CDF hesaplayıp grafiğe döküyor.
-- `Standart_Normal_Dagilim_Grafik_Cizimi()` aynı mantıkla PDF grafiğini çiziyor.
-- `ListSheetNames()` sayfa adında hata aldığım için kontrol amaçlı ekledim.
+Bu modülde, Excel’in `Norm_S_Dist`   fonksiyonundan yararlanılarak standart normal dağılımın kümülatif dağılım fonksiyonu (CDF) ve olasılık yoğunluk fonksiyonu (PDF) için grafikler oluşturulmuştur.
 
-
-## Nasıl çalıştırılır
-
-```
-1. Excel > Alt+F11                     # VBA ekranının açılması için bu adım uygulanmaktadır.
-2. Insert > Module                     # Yeni modül oluşturulması için kullanılmaktadır.
-3. Modul1.bas / Modul2.bas içeriği     # Kodların modül içine aktarılması için yapıştırma
-   (ya da File > Import File)            ya da doğrudan içe aktarma işlemi kullanılmaktadır.
-4. "Sayfa1"                            # Kod içindeki sayfa adının kendi sayfa adıyla
-                                          eşleşmesi gerekmektedir.
-5. Range("A2:C6") gibi aralıklar       # Kendi verisine göre güncellenmesi gerekmektedir.
-6. Sub çalıştırma: F5                  # Sonuçların görüntülenmesi için Immediate Window
-   (Ctrl+G)                              (Ctrl+G) kullanılmaktadır.
-```
-
-## Not
-
-Manuel bulduğum sonuçlarla kodun verdiği sonuçlar birebir aynı çıktı, yani kod doğru çalışıyor diyebilirim.
-
+* Normal_Dagilim_Grafigi() prosedürü, -3 ile 3 arasındaki Z değerleri için `Norm_S_Dist` fonksiyonunu kullanarak kümülatif dağılım (CDF) değerlerini hesaplar ve bu değerleri grafik üzerinde gösterir.
+* Standart_Normal_Dagilim_Grafik_Cizimi() prosedürü, aynı Z değerleri için `Norm_S_Dist` fonksiyonunu kullanarak olasılık yoğunluk (PDF) değerlerini hesaplar ve standart normal dağılım grafiğini oluşturur.
+* ListSheetNames() prosedürü ise çalışma kitabındaki sayfa adlarını listelemek ve kod içerisinde kullanılan sayfa adlarının kontrolünü yapmak amacıyla eklenmiştir.
